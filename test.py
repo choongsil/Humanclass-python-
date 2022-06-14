@@ -77,9 +77,34 @@ else:
 #     print('$'*i)
 #
 # 1000 이하의 소수 구하기
-for i in range(2, 1001):
-    for y in range(2, i):
-        if i % y == 0:
-            break
-    else:
-        print(i)
+# for i in range(2, 1001):
+#     for y in range(2, i):
+#         if i % y == 0:
+#             break
+#     else:
+#         print(i)
+#
+#두숫자를 읽어 들여서 최대공약수 최소 공배수 구하기
+x=int(input("숫자를 입력해주세요"))
+y=int(input('숫자를 입력해 주세요'))
+gcd=0
+if x>y:
+    x, y=y, x
+for i in range(2, x+1):
+    if(x%i==0 and y%i==0):
+        gcd=i
+print("%d,%d의 최대 공약수는" %(x,y), gcd)
+lcm=(x*y)/gcd
+print("%d,%d의 최소 공배수는" %(x,y), lcm)
+# 재귀 함수로 구하기
+# def fun1(x,y):
+#     if y==0:
+#         return x
+#     if x==y:
+#         return x
+#     return fun1(y, x%y)
+# gcd= fun1(x, y)
+# lcm=(x*y)/gcd
+# print('%d 와 %d 의 최대공약수는' %(x,y), gcd)
+# print('%d 와 %d 의 최소공배수는' %(x,y), lcm)
+
