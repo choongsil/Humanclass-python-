@@ -52,10 +52,34 @@ else:
 #         print("정답입니다. 정답은%d" %(i))
 #         break
 #   연습문제 3-3
-i=(-1)+3+(-5)+7+(-9)
-y=9
-k=0
-while y<100:
-    k=i+y
-    y+=1
-print(k)
+# i=(-1)+3+(-5)+7+(-9)
+# y=9
+# k=0
+# while y<100:
+#     k=i+y
+#     y+=1
+# print(k)
+#연습문제 3-4
+# i=1
+# while i<11:
+#     print('$'*i)
+#     i+=1
+#     if i==11 :
+#         while i>1 :
+#             i-=1
+#             print('$'*i)
+#         if i==1:
+#             break
+#
+# for i in range(1, 11):
+#     print('$'*i)
+# for i in range(10, 0, -1):
+#     print('$'*i)
+#
+# 1000 이하의 소수 구하기
+for i in range(2, 1001):
+    for y in range(2, i):
+        if i % y == 0:
+            break
+    else:
+        print(i)
