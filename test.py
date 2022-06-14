@@ -9,3 +9,6 @@
 
 # for i in range(10,1,-1):
 #     print("*"*i)
+y=int(input('단수입력:'))
+for i in range(1,10):
+    print(y, 'X', i, '=', y*i)
