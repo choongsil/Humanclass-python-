@@ -108,9 +108,51 @@ else:
 # print('%d 와 %d 의 최대공약수는' %(x,y), gcd)
 # print('%d 와 %d 의 최소공배수는' %(x,y), lcm)
 # 재귀함수로 n까지의 합 구하기
-def fun1(x):
-    if x<=0:
-        return 0
-    return x+fun1(x-1)
-print(fun1(100))
-
+# def fun1(x):
+#     if x<=0:
+#         return 0
+#     return x+fun1(x-1)
+# print(fun1(100))
+# score=[]
+# y=0
+# for i in range(1, 11):
+#     score.append(input('학생명 과 점수를 입력해 주세요.\n'))
+# while y< len(score):
+#     print(score[y])
+#     y+=1
+# for v in score:
+#     print(v)
+# s={1,2,3,4,5}
+# s.add(0)
+# print(s)
+# s.add(8)
+# print(s)
+# s.add(7)
+# print(s)
+# s.add('Hello')
+# print(s)
+# s.update()
+#리스트에 딕셔네리 입력후 값추출하기
+lstudent=[]
+sumeng=0
+summath=0
+sumkorean=0
+avgeng=0
+avgmath=0
+avgkorean=0
+for i in range(0, 5):
+    lstudent.append(dict(name=input('학생이름을 입력해 주세요.\n'),
+                         english=input('영어 점수를 입력해 주세요\n'),
+                         math=input('수학 점수를 입력해 주세요.\n'),
+                         korean=input('국어 점수를 입력해 주세요.\n')
+                         ))
+for i in lstudent:
+    sumeng+=int(i['english'])
+    summath+=int(i['math'])
+    sumkorean+=int(i['korean'])
+avgeng=sumeng/5
+avgmath=summath/5
+avgkorean=sumkorean/5
+print('영어\n총첨:%d\n평균:%f' %(sumeng, avgeng))
+print('수학\n총첨:%d\n평균:%f' %(summath, avgmath))
+print('국어\n총첨:%d\n평균:%f' %(sumkorean, avgkorean))
