@@ -132,27 +132,38 @@ else:
 # s.add('Hello')
 # print(s)
 # s.update()
-#리스트에 딕셔네리 입력후 값추출하기
-lstudent=[]
-sumeng=0
-summath=0
-sumkorean=0
-avgeng=0
-avgmath=0
-avgkorean=0
-for i in range(0, 5):
-    lstudent.append(dict(name=input('학생이름을 입력해 주세요.\n'),
-                         english=input('영어 점수를 입력해 주세요\n'),
-                         math=input('수학 점수를 입력해 주세요.\n'),
-                         korean=input('국어 점수를 입력해 주세요.\n')
-                         ))
-for i in lstudent:
-    sumeng+=int(i['english'])
-    summath+=int(i['math'])
-    sumkorean+=int(i['korean'])
-avgeng=sumeng/5
-avgmath=summath/5
-avgkorean=sumkorean/5
-print('영어\n총첨:%d\n평균:%f' %(sumeng, avgeng))
-print('수학\n총첨:%d\n평균:%f' %(summath, avgmath))
-print('국어\n총첨:%d\n평균:%f' %(sumkorean, avgkorean))
+#리스트에 딕셔너리 입력후 값추출하기
+# lstudent=[]
+# sumeng=0
+# summath=0
+# sumkorean=0
+# avgeng=0
+# avgmath=0
+# avgkorean=0
+# for i in range(0, 5):
+#     lstudent.append(dict(name=input('%d번째 학생이름을 입력해 주세요.\n'%(i+1)),
+#                          english=input('영어 점수를 입력해 주세요\n'),
+#                          math=input('수학 점수를 입력해 주세요.\n'),
+#                          korean=input('국어 점수를 입력해 주세요.\n')
+#                          ))
+# for i in lstudent:
+#     sumeng+=int(i['english'])
+#     summath+=int(i['math'])
+#     sumkorean+=int(i['korean'])
+# avgeng=sumeng/len(lstudent)
+# avgmath=summath/len(lstudent)
+# avgkorean=sumkorean/len(lstudent)
+# print('영어\n총첨:%d\n평균:%f' %(sumeng, avgeng))
+# print('수학\n총첨:%d\n평균:%f' %(summath, avgmath))
+# print('국어\n총첨:%d\n평균:%f' %(sumkorean, avgkorean))
+#메뉴명, 가격을 읽어드려서 list에 저장
+menu=[]
+name=input('메뉴명을 입력해주세요.')
+while name!='':
+    price = int(input('가격을 입력해주세요'))
+    d={'name':name, 'price':price}
+    menu.append(d)
+    name = input('메뉴명을 입력해주세요.')
+print(menu)
+
+
