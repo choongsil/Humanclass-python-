@@ -157,13 +157,29 @@ else:
 # print('수학\n총첨:%d\n평균:%f' %(summath, avgmath))
 # print('국어\n총첨:%d\n평균:%f' %(sumkorean, avgkorean))
 #메뉴명, 가격을 읽어드려서 list에 저장
-menu=[]
-name=input('메뉴명을 입력해주세요.')
-while name!='':
-    price = int(input('가격을 입력해주세요'))
-    d={'name':name, 'price':price}
-    menu.append(d)
-    name = input('메뉴명을 입력해주세요.')
-print(menu)
+# menu=[]
+# name=input('메뉴명을 입력해주세요.')
+# while name != '':
+#     price = int(input('가격을 입력해주세요'))
+#     d={'name': name, 'price': price}
+#     menu.append(d)
+#     name = input('메뉴명을 입력해주세요.')
+# print(menu)
+#반환값이 없는 함수로 구구단 출력 하기
+# def gugudan(x,y):
+#     print(x, "X", y, "=", x*y)
+# for i in range (2, 10):
+#     for j in range (1, 10):
+#         gugudan(i, j)
+#         if j==9:
+#             print("-------------")
 
-
+#반환값이 있는 함수로 구구단 출력 하기
+def gugu(x, y):
+    p=str(x)+'X'+str(y)+'='+str((x*y))
+    return p
+for i in range (2, 10):
+    for j in range(1, 10):
+        print(gugu(i, j))
+        if j==9:
+            print('-----------')
