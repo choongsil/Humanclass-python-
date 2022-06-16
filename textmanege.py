@@ -18,11 +18,15 @@
 # f.close()
 
 #데이터 파일 저장하기
-f = open('d:/temp/menu1.txt', mode='w', encoding='utf-8') #없으면 만들어서 열고, 있으면 열고
-f.write("아메리카노")
-f.write("라떼")
-f.close()
+# f = open('d:/temp/menu1.txt', mode='w', encoding='utf-8') #없으면 만들어서 열고, 있으면 열고
+# f.write("아메리카노")
+# f.write("라떼")
+# f.close()
 
-f = open('d:/temp/menu1.txt', mode='w', encoding='utf-8') #없으면 만들어서 열고, 있으면 열고
-f.writelines(["아메리카노","라떼"])
+# f = open('d:/temp/menu1.txt', mode='w', encoding='utf-8') #없으면 만들어서 열고, 있으면 열고
+# f.writelines(["아메리카노", "\n", "라떼"])
+# f.close()
+
+f = open('d:/temp/menu1.txt', mode='a', encoding='utf-8') #mode='a' 업데이트
+f.writelines(["\n", "주스", "\n", "3000원"])
 f.close()
